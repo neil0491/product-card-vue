@@ -5,7 +5,11 @@
         <Slider />
       </div>
       <div class="col-12 col-md-6">
-        <CardContent />
+        <CardContent
+          :counter="counter"
+          @addCount="addCount"
+          @decCount="decCount"
+        />
       </div>
     </div>
   </div>
@@ -21,15 +25,26 @@ export default {
     CardContent,
     Slider,
   },
+  data: () => ({
+    counter: 0,
+  }),
+  methods: {
+    addCount() {
+      return this.counter++;
+    },
+    decCount() {
+      return this.counter--;
+    },
+  },
 };
 </script>
 
 <style>
 body {
-  font-family: "Rubik", sans-serif;
+  font-family: "Rubik", sans-serif !important;
   font-weight: normal;
-  font-size: 13px;
-  line-height: 15px;
+  font-size: 13px !important;
+  line-height: 15px !important;
   color: #2f323d;
 }
 .card-product {
@@ -37,6 +52,29 @@ body {
 }
 .border-bottom {
   border-bottom: 1px solid #e1dfdf;
+}
+.btn {
+  display: inline-block;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  background-color: #0000;
+  border: 1px solid #0000;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  border-radius: 0.25rem;
+  transition: color 0.5s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.btn:active{
+  transform: scale(1.04);
 }
 .btn__input {
   max-width: 60px;

@@ -52,11 +52,19 @@
         <p>Количество</p>
         <div class="product-quantity__picker">
           <div class="picker">
-            <button class="btn btn__outline" type="button">
+            <button
+              @click="onDecCount"
+              class="btn btn__outline"
+              type="button"
+            >
               <img src="/img/icon-min.svg" alt="Payme" />
             </button>
-            <input class="btn btn__input" type="text" value="123" />
-            <button class="btn btn__outline" type="button">
+            <input class="btn btn__input" type="text" :value="counter" />
+            <button
+              @click="onAddCount"
+              class="btn btn__outline"
+              type="button"
+            >
               <img src="/img/icon-plus.svg" alt="Payme" />
             </button>
           </div>
@@ -85,11 +93,26 @@
 <script>
 export default {
   name: "CardContent",
+  props: {
+    counter: Number,
+  },
+  data: () => ({
+  }),
+  methods: {
+    onAddCount() {
+      this.$emit("addCount", );
+    },
+    onDecCount() {
+      if (this.counter) {
+        this.$emit("decCount", );
+      }
+    },
+  },
 };
 </script>
 
 <style scoped>
-.product-quantity__picker{
+.product-quantity__picker {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
