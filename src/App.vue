@@ -6,7 +6,7 @@
       </div>
       <div class="col-12 col-md-6">
         <CardContent
-          :counter="counter"
+          v-model="counter"
           @addCount="addCount"
           @decCount="decCount"
         />
@@ -26,14 +26,14 @@ export default {
     Slider,
   },
   data: () => ({
-    counter: 0,
+    counter: 1,
   }),
   methods: {
-    addCount() {
-      return this.counter++;
+    addCount(value) {
+      return (this.counter = value + 1);
     },
-    decCount() {
-      return this.counter--;
+    decCount(value) {
+      return (this.counter = value - 1);
     },
   },
 };
@@ -73,7 +73,7 @@ body {
   transition: color 0.5s ease-in-out, background-color 0.15s ease-in-out,
     border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
-.btn:active{
+.btn:active {
   transform: scale(1.04);
 }
 .btn__input {

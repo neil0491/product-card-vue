@@ -39,15 +39,23 @@ export default {
       "https://images.unsplash.com/photo-1549049950-48d5887197a0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80",
       "/img/02.png",
       "https://images.unsplash.com/photo-1580870069867-74c57ee1bb07?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80",
+      "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1549049950-48d5887197a0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80",
+      "/img/02.png",
+      "https://images.unsplash.com/photo-1580870069867-74c57ee1bb07?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80",
+      "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1549049950-48d5887197a0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80",
+      "/img/02.png",
+      "https://images.unsplash.com/photo-1580870069867-74c57ee1bb07?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80",
     ],
     hooperSettings: {
-      itemsToShow: 1,
+      itemsToShow: 3,
       breakpoints: {
         500: {
-          itemsToShow: 3,
+          itemsToShow: 6,
         },
         800: {
-          itemsToShow: 7,
+          itemsToShow: 8,
         },
       },
     },
@@ -69,7 +77,7 @@ export default {
 .top-slide {
   height: 100%;
   max-width: 85%;
-  margin-left: 70px;
+  margin-left: 80px;
   border: 1px solid #e0e0e0;
   box-sizing: border-box;
   border-radius: 8px;
@@ -129,8 +137,8 @@ export default {
 .hooper:focus {
   outline: none;
 }
-.is-current .bottom-slide__inner{
-    border: 1px solid #4CA780;
+.is-current .bottom-slide__inner {
+  border: 1px solid #4ca780;
 }
 @media only screen and (max-width: 500px) {
   .hooper-navigation.is-vertical .hooper-prev,

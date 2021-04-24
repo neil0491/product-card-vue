@@ -52,14 +52,15 @@
         <p>Количество</p>
         <div class="product-quantity__picker">
           <div class="picker">
-            <button
-              @click="onDecCount"
-              class="btn btn__outline"
-              type="button"
-            >
+            <button @click="onDecCount" class="btn btn__outline" type="button">
               <img src="/img/icon-min.svg" alt="Payme" />
             </button>
-            <input class="btn btn__input" type="text" :value="counter" />
+            <input
+              class="btn btn__input"
+              type="text"
+              :value="value"
+              @input="input"
+            />
             <button
               @click="onAddCount"
               class="btn btn__outline"
@@ -94,17 +95,19 @@
 export default {
   name: "CardContent",
   props: {
-    counter: Number,
+    value: Number,
   },
-  data: () => ({
-  }),
+  data: () => ({}),
   methods: {
+    input(e) {
+      this.$emit("input", +e.target.value);
+    },
     onAddCount() {
-      this.$emit("addCount", );
+      this.$emit("addCount", this.value);
     },
     onDecCount() {
-      if (this.counter) {
-        this.$emit("decCount", );
+      if (this.value) {
+        this.$emit("decCount", this.value);
       }
     },
   },
